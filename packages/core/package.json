@@ -1,0 +1,71 @@
+{
+  "name": "ogsmith",
+  "version": "0.1.0",
+  "description": "Typed, deterministic SVG to PNG rendering engine for OG images, social cards, and release banners. Same props, same bytes, in Node and in the browser.",
+  "license": "MIT",
+  "author": "Fabio Rosa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabiorosa/ogsmith.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/fabiorosa/ogsmith#readme",
+  "keywords": [
+    "og-image",
+    "open-graph",
+    "social-card",
+    "svg",
+    "png",
+    "satori",
+    "resvg",
+    "deterministic"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./raster": {
+      "types": "./dist/raster/node.d.ts",
+      "default": "./dist/raster/node.js"
+    },
+    "./raster-wasm": {
+      "types": "./dist/raster/wasm.d.ts",
+      "default": "./dist/raster/wasm.js"
+    },
+    "./fonts/*": "./fonts/*"
+  },
+  "files": [
+    "dist",
+    "fonts"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "satori": "^0.28.0",
+    "zod": "^4.4.3"
+  },
+  "peerDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@resvg/resvg-wasm": "^2.6.2"
+  },
+  "peerDependenciesMeta": {
+    "@resvg/resvg-js": {
+      "optional": true
+    },
+    "@resvg/resvg-wasm": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@resvg/resvg-wasm": "^2.6.2",
+    "vitest": "^4.1.10"
+  }
+}
