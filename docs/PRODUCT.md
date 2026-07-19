@@ -1,10 +1,10 @@
-# OGsmith — product brief
+# OGsmith product brief
 
 ## One-liner
 
-OGsmith is an open-source studio and rendering engine for crafting pixel-perfect
-Open Graph images, social cards, and release banners — what you see in the
-editor is exactly what ships in the PNG.
+OGsmith is an open-source studio and rendering engine for crafting
+pixel-perfect Open Graph images, social cards, and release banners. What you
+see in the editor is exactly what ships in the PNG.
 
 ## Problem
 
@@ -14,8 +14,8 @@ Today the options are:
 
 - **Design tools (Figma, Canva):** manual, repetitive, easy to drift from the
   brand, and disconnected from the values that change (title, version, date).
-- **Code-only generators (`@vercel/og`, satori scripts):** powerful but blind —
-  you iterate by re-running code, there is no visual feedback loop, and
+- **Code-only generators (`@vercel/og`, satori scripts):** powerful but blind.
+  You iterate by re-running code, there is no visual feedback loop, and
   non-developers on the team cannot touch them.
 - **Hosted SaaS generators:** closed, paid, template-generic, and the preview
   frequently does not match the exported file.
@@ -28,10 +28,10 @@ artifact by construction.
 
 Two deliverables in one repository:
 
-1. **`ogsmith` (npm package)** — a typed, deterministic SVG→PNG rendering
-   engine. A template is a pure function of typed props; the same input always
-   produces the same bytes, in Node and in the browser.
-2. **OGsmith Studio (web app)** — a premium, client-only editor. Pick a
+1. **`ogsmith` (npm package):** a typed, deterministic SVG to PNG rendering
+   engine. A template is a pure function of typed props; the same input
+   always produces the same bytes, in Node and in the browser.
+2. **OGsmith Studio (web app):** a premium, client-only editor. Pick a
    template, edit content and theme with live preview, export PNG/SVG in one
    click. No account, no server, no telemetry.
 
@@ -48,9 +48,9 @@ Two deliverables in one repository:
   displays the exact SVG the engine produced; the PNG is a rasterization of
   that same SVG. There is no second rendering path that can drift.
 - **Deterministic.** Fonts are bundled, layout is pure, no network at render
-  time. Same props → same bytes, verified by tests in CI.
+  time. Same props, same bytes, verified by tests in CI.
 - **Craft-first templates.** A small set of opinionated, typographically
-  serious templates — not 400 generic ones.
+  serious templates instead of 400 generic ones.
 
 ## Non-goals (V1)
 
@@ -64,5 +64,5 @@ Two deliverables in one repository:
 
 - Engine published to npm with typed API and documented templates.
 - Studio deployed as a static site, usable end-to-end in under a minute.
-- CI proves determinism: SVG snapshots + PNG pixel tests on every commit.
+- CI proves determinism: SVG snapshots plus PNG pixel tests on every commit.
 - README reads like a product, docs read like a senior engineer wrote them.

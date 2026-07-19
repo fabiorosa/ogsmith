@@ -2,14 +2,14 @@
 
 Open-source studio and rendering engine for pixel-perfect Open Graph images,
 social cards, and release banners. What you see in the editor is exactly
-what ships in the PNG — preview and export are the same artifact by
+what ships in the PNG: preview and export are the same artifact by
 construction.
 
 ## Two deliverables, one repo
 
-- **`ogsmith`** (npm) — a typed, deterministic SVG→PNG rendering engine.
-  Same props, same bytes — in Node, in CI, in the browser.
-- **OGsmith Studio** — a client-only visual editor: pick a template, edit
+- **`ogsmith`** (npm): a typed, deterministic SVG to PNG rendering engine.
+  Same props, same bytes, in Node, in CI, and in the browser.
+- **OGsmith Studio**: a client-only visual editor. Pick a template, edit
   with live preview, export in one click. No account, no server, no
   telemetry.
 

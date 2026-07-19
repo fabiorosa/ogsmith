@@ -1,4 +1,4 @@
-# OGsmith — V1 scope
+# OGsmith V1 scope
 
 ## In scope (V1 portfolio release)
 
@@ -7,22 +7,22 @@
 - `render()` and `renderPng()` public API, TypeScript strict, typed props.
 - 4 built-in templates (each with feed-tested typography and complete theme
   support):
-  1. **blog-post** — OG image for an article (1200×630).
-  2. **product-launch** — OG image for a product/landing page (1200×630).
-  3. **release-banner** — version/release announcement card (1600×900).
-  4. **quote-card** — statement/quote card for social posts (1080×1080).
-- 4 built-in themes (each a full token set, AA-contrast-verified):
+  1. **blog-post**: OG image for an article (1200×630).
+  2. **product-launch**: OG image for a product/landing page (1200×630).
+  3. **release-banner**: version/release announcement card (1600×900).
+  4. **quote-card**: statement/quote card for social posts (1080×1080).
+- 4 built-in themes, each a full token set, AA-contrast-verified:
   `graphite` (dark), `paper` (light), `midnight` (dark blue-black),
   `sand` (warm light).
-- Bundled OFL fonts: Inter (400/600/800) + JetBrains Mono (400/700),
+- Bundled OFL fonts: Inter (400/600/800) plus JetBrains Mono (400/700),
   licenses committed.
 - Custom template escape hatch (`defineTemplate`) with zod schema.
-- Published to npm with README, typedoc-free handwritten API docs.
+- Published to npm with README and handwritten API docs.
 
 ### Studio (`apps/studio`)
 
-- Template gallery → editor with schema-generated controls → live preview
-  → export PNG / copy SVG.
+- Template gallery, editor with schema-generated controls, live preview,
+  export PNG / copy SVG.
 - Theme picker, custom accent color (with automatic AA contrast guard).
 - Logo upload (client-side only, embedded as data URI).
 - Shareable URL (state in hash fragment).
@@ -32,7 +32,7 @@
 ### Quality bar
 
 - Vitest: engine unit tests, SVG snapshots, PNG pixel-hash determinism tests.
-- Playwright: one smoke flow (open studio → edit title → export PNG).
+- Playwright: one smoke flow (open studio, edit title, export PNG).
 - GitHub Actions: lint, typecheck, test, build on every push; deploy on main.
 - Zero `any`, zero eslint-disable without a written reason.
 

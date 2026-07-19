@@ -10,8 +10,8 @@ milestone before its review gate is satisfied. Update ticket status and
 
 ## Product rules
 
-- OGsmith is a public portfolio product and a real open-source tool — not a
-  prototype, not a tutorial clone.
+- OGsmith is a public portfolio product and a real open-source tool, not a
+  prototype or a tutorial clone.
 - Determinism is the core promise: no template, theme, or raster change ships
   without its snapshot/hash tests updated intentionally.
 - There is exactly one rendering path (engine SVG). Never introduce a second
@@ -19,6 +19,8 @@ milestone before its review gate is satisfied. Update ticket status and
 - Do not expose or reuse concepts, data, or code from Fabio's private
   commercial projects.
 - All code, comments, commits, docs, and UI copy in natural US English.
+- House style: no em dashes anywhere (docs, UI copy, commits, repo
+  metadata). Use periods, colons, or commas instead.
 - Never invent users, testimonials, usage metrics, or benchmarks.
 
 ## Authorship rules

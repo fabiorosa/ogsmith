@@ -1,4 +1,4 @@
-# OGsmith — technical architecture
+# OGsmith technical architecture
 
 ## Repository layout
 
@@ -7,10 +7,10 @@ npm workspaces monorepo:
 ```
 ogsmith/
 ├── packages/
-│   └── core/            # npm package `ogsmith` — the rendering engine
+│   └── core/            # npm package `ogsmith`, the rendering engine
 │       ├── src/
 │       │   ├── engine/      # satori orchestration, font loading, SVG output
-│       │   ├── raster/      # SVG → PNG (resvg), node + wasm entry points
+│       │   ├── raster/      # SVG to PNG (resvg), node + wasm entry points
 │       │   ├── templates/   # built-in templates (pure functions)
 │       │   ├── theme/       # theme tokens, color utilities, contrast checks
 │       │   └── index.ts     # public API
@@ -43,7 +43,7 @@ render SVG directly        resvg(SVG) → PNG bytes
 in the browser             (resvg-js in Node, resvg-wasm in browser)
 ```
 
-**Parity by construction:** there is exactly one artifact — the SVG produced
+**Parity by construction:** there is exactly one artifact, the SVG produced
 by the engine. The studio preview displays that SVG as-is (`<img>` from a
 blob URL). The PNG export rasterizes that same SVG. No parallel HTML/CSS
 preview implementation exists, so preview and export cannot diverge.
@@ -73,26 +73,26 @@ const svg = await render(templates.blogPost, {
 const png = await renderPng(templates.blogPost, props); // Uint8Array
 ```
 
-- `render(template, props) → Promise<string>` — SVG.
-- `renderPng(template, props) → Promise<Uint8Array>` — PNG.
-- `templates` — built-in template registry, each with a typed props schema
-  (zod) used for validation and for generating the studio's editor controls.
-- Custom templates: users can pass their own template function + schema.
+- `render(template, props) → Promise<string>` returns SVG.
+- `renderPng(template, props) → Promise<Uint8Array>` returns PNG.
+- `templates` is the built-in template registry. Each entry carries a typed
+  props schema (zod) used for validation and for generating the studio's
+  editor controls.
+- Custom templates: users can pass their own template function plus schema.
 
 ## Template control metadata
 
 Each template exports a zod schema with per-field UI metadata (label, control
-type, max length). The studio generates its form from this schema — adding a
-template requires zero studio changes. This is the same registry pattern as
-`arquivo-critico-extrai-para-registry`: templates self-register; the engine
-and studio never need editing to accept a new one.
+type, max length). The studio generates its form from this schema, so adding
+a template requires zero studio changes. Templates self-register through the
+registry; the engine and studio never need editing to accept a new one.
 
 ## Studio architecture
 
 - Vite + React + TypeScript strict. No backend, no database, no auth,
   no cookies, no analytics. Deployable to GitHub Pages.
-- State: single editor store (Zustand) — selected template, props, theme,
-  export settings. URL hash encodes state for shareable links.
+- State: single editor store (Zustand) with selected template, props, theme,
+  and export settings. URL hash encodes state for shareable links.
 - Rendering: engine runs in a web worker (satori + resvg-wasm) so typing in
   the form never blocks the UI; renders are debounced (~120 ms).
 - Export: PNG via resvg-wasm in the worker; SVG as direct download.
