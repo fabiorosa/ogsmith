@@ -44,15 +44,15 @@ each template's sample render reviewed against UI_SPEC art direction.
 
 | ID  | Ticket | Status |
 | --- | ------ | ------ |
-| M3-1 | App shell: tokens, layout, topbar, panel/stage split, responsive sheet | todo |
-| M3-2 | Engine web worker: boot, debounced render, loading/error states | todo |
-| M3-3 | Schema-to-form generation (all control types), field validation UX | todo |
-| M3-4 | Canvas stage: zoom, dimension readout, render glow, error panel | todo |
-| M3-5 | Template gallery with live sample renders | todo |
-| M3-6 | Theme picker plus custom accent with AA guard | todo |
-| M3-7 | Export: PNG download, copy SVG, button state machine | todo |
-| M3-8 | Shareable URL state (hash encode/decode, invalid-hash handling) | todo |
-| M3-9 | Studio component tests plus Playwright smoke | todo |
+| M3-1 | App shell: tokens, layout, topbar, panel/stage split, responsive sheet | done |
+| M3-2 | Engine web worker: boot, debounced render, loading/error states | done |
+| M3-3 | Schema-to-form generation (all control types), field validation UX | done |
+| M3-4 | Canvas stage: zoom, dimension readout, render glow, error panel | done |
+| M3-5 | Template gallery with live sample renders | done |
+| M3-6 | Theme picker plus custom accent with AA guard | done |
+| M3-7 | Export: PNG download, copy SVG, button state machine | done |
+| M3-8 | Shareable URL state (hash encode/decode, invalid-hash handling) | done |
+| M3-9 | Studio component tests plus Playwright smoke | done |
 
 **Gate M3:** smoke test green in CI; UI_SPEC pre-flight checklist passes
 (spacing, states, hierarchy, no emoji, single accent).

@@ -20,5 +20,5 @@
       "ogsmith/raster-wasm": ["../../packages/core/src/raster/wasm.ts"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "e2e"]
 }
