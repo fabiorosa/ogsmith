@@ -14,7 +14,7 @@
 - 4 built-in themes, each a full token set, AA-contrast-verified:
   `graphite` (dark), `paper` (light), `midnight` (dark blue-black),
   `sand` (warm light).
-- Bundled OFL fonts: Inter (400/600/800) plus JetBrains Mono (400/700),
+- Bundled OFL fonts: Inter (400/500/600/800) plus JetBrains Mono (400/700),
   licenses committed.
 - Custom template escape hatch (`defineTemplate`) with zod schema.
 - Published to npm with README and handwritten API docs.

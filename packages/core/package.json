@@ -66,6 +66,7 @@
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",
     "@resvg/resvg-wasm": "^2.6.2",
+    "@types/node": "^26.1.1",
     "vitest": "^4.1.10"
   }
 }
