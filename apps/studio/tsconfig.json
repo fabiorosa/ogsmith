@@ -14,7 +14,11 @@
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
     "noEmit": true,
-    "types": ["vite/client"]
+    "types": ["vite/client", "node"],
+    "paths": {
+      "ogsmith": ["../../packages/core/src/index.ts"],
+      "ogsmith/raster-wasm": ["../../packages/core/src/raster/wasm.ts"]
+    }
   },
   "include": ["src"]
 }

@@ -1,5 +1,31 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../../packages/core/fonts/Inter-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../../../packages/core/fonts/Inter-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../../../packages/core/fonts/Inter-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../../packages/core/fonts/JetBrainsMono-Regular.ttf")
+    format("truetype");
+}
+
 @theme {
   --color-bg: #0e0f11;
   --color-surface: #16181b;
@@ -10,4 +36,10 @@
   --color-accent: #4cc38a;
   --color-accent-ink: #0b2818;
   --color-danger: #e5484d;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
 }

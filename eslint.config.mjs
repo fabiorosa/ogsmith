@@ -15,6 +15,15 @@ export default tseslint.config(
     },
   },
   {
+    rules: {
+      // Numbers interpolate losslessly; forbidding them adds String() noise.
+      "@typescript-eslint/restrict-template-expressions": [
+        "error",
+        { allowNumber: true },
+      ],
+    },
+  },
+  {
     files: ["**/*.mjs", "**/*.config.ts"],
     extends: [tseslint.configs.disableTypeChecked],
   },
