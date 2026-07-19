@@ -7,9 +7,9 @@ milestone starts. Status: `todo`, `doing`, `done`.
 
 | ID  | Ticket | Status |
 | --- | ------ | ------ |
-| M0-1 | Monorepo scaffold: npm workspaces, TS strict configs, ESLint, Vitest wiring, root scripts | todo |
-| M0-2 | CI: verify workflow (lint, typecheck, test, build) green on empty packages | todo |
-| M0-3 | Fonts: commit Inter + JetBrains Mono subsets with OFL licenses; font loader with byte cache | todo |
+| M0-1 | Monorepo scaffold: npm workspaces, TS strict configs, ESLint, Vitest wiring, root scripts | done |
+| M0-2 | CI: verify workflow (lint, typecheck, test, build) green on empty packages | done |
+| M0-3 | Fonts: commit Inter + JetBrains Mono subsets with OFL licenses; font loader with byte cache | done |
 
 **Gate M0:** CI green; `npm test` runs in both packages; fonts load in a
 node script.
@@ -18,12 +18,12 @@ node script.
 
 | ID  | Ticket | Status |
 | --- | ------ | ------ |
-| M1-1 | Theme system: token contract, 4 themes, contrast utility plus tests | todo |
-| M1-2 | `defineTemplate`, registry, zod schema with UI metadata vocabulary | todo |
-| M1-3 | `render()` via satori: element-tree helpers, font wiring, SVG output | todo |
-| M1-4 | Template 1: `blog-post` (1200×630) with SVG snapshots across 4 themes | todo |
-| M1-5 | `renderPng()` native (resvg-js) plus PNG hash determinism tests | todo |
-| M1-6 | wasm raster entry plus parity test (wasm hash equals native hash) | todo |
+| M1-1 | Theme system: token contract, 4 themes, contrast utility plus tests | done |
+| M1-2 | `defineTemplate`, registry, zod schema with UI metadata vocabulary | done |
+| M1-3 | `render()` via satori: element-tree helpers, font wiring, SVG output | done |
+| M1-4 | Template 1: `blog-post` (1200×630) with SVG snapshots across 4 themes | done |
+| M1-5 | `renderPng()` native (resvg-js) plus PNG hash determinism tests | done |
+| M1-6 | wasm raster entry plus parity test (wasm hash equals native hash) | done |
 
 **Gate M1:** blog-post renders identical bytes native/wasm in CI; contrast
 tests pass on all 4 themes.
@@ -32,10 +32,10 @@ tests pass on all 4 themes.
 
 | ID  | Ticket | Status |
 | --- | ------ | ------ |
-| M2-1 | Template 2: `product-launch` (1200×630) with tests | todo |
-| M2-2 | Template 3: `release-banner` (1600×900) with tests | todo |
-| M2-3 | Template 4: `quote-card` (1080×1080) with tests | todo |
-| M2-4 | Logo/image prop support (data URI), scaling rules, tests | todo |
+| M2-1 | Template 2: `product-launch` (1200×630) with tests | done |
+| M2-2 | Template 3: `release-banner` (1600×900) with tests | done |
+| M2-3 | Template 4: `quote-card` (1080×1080) with tests | done |
+| M2-4 | Logo/image prop support (data URI), scaling rules, tests | done |
 
 **Gate M2:** full (4 templates × 4 themes) snapshot and PNG matrix green;
 each template's sample render reviewed against UI_SPEC art direction.

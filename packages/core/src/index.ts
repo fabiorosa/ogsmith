@@ -47,6 +47,9 @@ export { box, text, image } from "./templates/ui.js";
 
 // Built-in templates (importing registers them)
 export { blogPost } from "./templates/blog-post.js";
+export { productLaunch } from "./templates/product-launch.js";
+export { releaseBanner } from "./templates/release-banner.js";
+export { quoteCard } from "./templates/quote-card.js";
 
 // Rendering
 export { render, type RenderOptions } from "./engine/render.js";
