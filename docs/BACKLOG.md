@@ -61,11 +61,11 @@ each template's sample render reviewed against UI_SPEC art direction.
 
 | ID  | Ticket | Status |
 | --- | ------ | ------ |
-| M4-1 | Core README (product-grade), handwritten API docs, usage examples | todo |
-| M4-2 | Repo README with live demo link, screenshots, architecture summary | todo |
-| M4-3 | GitHub Pages deploy workflow plus custom 404-to-app redirect | todo |
-| M4-4 | npm publish dry-run, package.json metadata, provenance, `core-v0.1.0` | todo |
-| M4-5 | Final pass: DECISIONS.md up to date, SESSION_STATE clean, license files | todo |
+| M4-1 | Core README (product-grade), handwritten API docs, usage examples | done |
+| M4-2 | Repo README with live demo link, screenshots, architecture summary | done |
+| M4-3 | GitHub Pages deploy workflow plus custom 404-to-app redirect | done |
+| M4-4 | npm publish dry-run, package.json metadata, provenance, `core-v0.1.0` | done |
+| M4-5 | Final pass: DECISIONS.md up to date, SESSION_STATE clean, license files | done |
 
 **Gate M4 (definition of done):** studio live on Pages; `npm i ogsmith`
 works in a fresh project; CI fully green; docs complete.

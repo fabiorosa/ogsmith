@@ -2,28 +2,38 @@
 
 ## Current status
 
-Spec suite written (PRODUCT, SCOPE, ARCHITECTURE, DECISIONS, UI_SPEC,
-BACKLOG, TESTING, AGENTS, README). Repository created and pushed to
-https://github.com/fabiorosa/ogsmith. Name approved by Fabio.
+All V1 milestones (M0 through M4) are implemented and green locally:
 
-No code exists yet.
+- Engine: 4 templates × 4 themes, SVG snapshots, PNG sha256 hashes,
+  native/wasm byte parity proven by test. 77 core tests passing.
+- Studio: gallery, schema-generated editor, worker rendering, theme picker
+  with AA accent guard, PNG/SVG export, shareable hash URLs. 8 component
+  tests plus 1 Playwright smoke passing.
+- Docs: root README with screenshots, engine README with API docs.
+- `npm publish --dry-run` clean (41 files, LICENSE and OFL texts included).
 
-## Next step
+## Blocked on external action (Fabio)
 
-1. Fabio confirms the remaining checkpoint items (accent color, template
-   set).
-2. On approval: start M0-1 (monorepo scaffold).
+1. **GitHub Actions is disabled account-wide**: every run ends in
+   `startup_failure` with no logs, in this repo and in caselane (its CI has
+   never run). Open https://github.com/fabiorosa/ogsmith/actions and follow
+   the banner (usually billing verification in Settings, then Billing).
+   Once unlocked: re-run the `verify` workflow, then the `deploy` workflow
+   publishes the studio to GitHub Pages.
+2. **GitHub Pages**: after the first successful deploy run, confirm
+   Settings, then Pages shows the site at
+   https://fabiorosa.github.io/ogsmith/.
+3. **npm publish** (optional, when ready): `npm login` as the owner, then
+   `npm publish` inside `packages/core`. Dry-run is already verified.
 
-## Open decisions for the checkpoint
+## Next steps after unblock
 
-- Studio accent: calm green `#4cc38a` (deliberate contrast with CaseLane's
-  amber). Swappable in one token if rejected.
-- Template set: blog-post, product-launch, release-banner, quote-card.
+- Re-run CI, confirm the verify and e2e jobs are green on Linux.
+- Add the live demo link to the root README once Pages is up.
+- Consider tagging `core-v0.1.0` and publishing to npm.
 
-## Do not
+## Standing rules
 
-- Start coding before the checkpoint approval.
-- Add AI co-author trailers or markers anywhere.
-- Introduce any second rendering/preview path.
-- Use em dashes in any public-facing text (docs, UI copy, commits, repo
-  metadata). House style: periods, colons, commas.
+- No AI co-author trailers or markers anywhere.
+- No em dashes in public-facing text.
+- One rendering path; hash tests update only with intent.
