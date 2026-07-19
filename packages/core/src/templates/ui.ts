@@ -9,11 +9,12 @@ type Style = Readonly<Record<string, string | number>>;
 type Child = ElementNode | string;
 
 export function box(style: Style, ...children: readonly Child[]): ElementNode {
+  const first = children[0];
   return {
     type: "div",
     props: {
       style: { display: "flex", ...style },
-      children: children.length === 1 ? children[0] : children,
+      children: children.length === 1 && first !== undefined ? first : children,
     },
   };
 }

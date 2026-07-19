@@ -19,7 +19,7 @@ export function registerTemplate<TProps extends Record<string, unknown>>(
       `Template id "${template.id}" must be kebab-case (a-z, 0-9, dashes)`,
     );
   }
-  registry.set(template.id, template as AnyTemplate);
+  registry.set(template.id, template);
   return template;
 }
 
