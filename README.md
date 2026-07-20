@@ -5,6 +5,8 @@ social cards, and release banners. What you see in the editor is exactly
 what ships in the PNG: preview and export are the same artifact by
 construction.
 
+**Live studio: https://fabiorosa.github.io/ogsmith/**
+
 ![OGsmith Studio editor](docs/assets/studio-editor.png)
 
 ## Two deliverables, one repo
